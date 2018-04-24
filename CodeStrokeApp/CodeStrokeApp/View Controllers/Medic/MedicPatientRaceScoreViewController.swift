@@ -17,6 +17,9 @@ class MedicPatientRaceScoreViewController: UIViewController, UIPickerViewDataSou
         return 3;
     }
     
+    func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
+        return String(row)
+    }
     @IBOutlet weak var facialPalsyRaceScore: UIPickerView!
     @IBOutlet weak var armMotorRaceScore: UIPickerView!
     @IBOutlet weak var legMotorRaceScore: UIPickerView!
@@ -45,6 +48,17 @@ class MedicPatientRaceScoreViewController: UIViewController, UIPickerViewDataSou
     }
     
     @IBAction func donePressed(_ sender: UIButton) {
+        let appDelegate = UIApplication.shared.delegate as! AppDelegate
+        let d = [
+            "facialPalsyRaceScore":facialPalsyRaceScore.selectedRow(inComponent: 0),
+            "armMotorRaceScore":armMotorRaceScore.selectedRow(inComponent: 0),
+            "legMotorRaceScore":legMotorRaceScore.selectedRow(inComponent: 0),
+            "headAndGazeRaceScore":headAndGazeRaceScore.selectedRow(inComponent: 0)
+            ] as [String:Any]
+        
+        d.forEach { (k,v) in appDelegate.patientData[k] = v }
+        
+        sendPatientData(data: appDelegate.patientData)
         self.dismiss(animated: false, completion: nil)
     }
     

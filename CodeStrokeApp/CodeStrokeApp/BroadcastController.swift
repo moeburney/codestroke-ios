@@ -30,6 +30,24 @@ func sendPatientData(data:[String:Any]) -> Void {
     }
 }
 
+func getPatientData(callback:@escaping (_ data:[String:Any]?, _ error:Error?) -> Void) {
+    var request = URLRequest(url: URL(string:"http://codestroke.pythonanywhere.com/patients")!)
+    request.httpMethod = "GET"
+    let config = URLSessionConfiguration.default
+    let session = URLSession(configuration: config)
+    
+    let task = session.dataTask(with: request, completionHandler: { (data, response, error) -> Void in
+        guard let data = data, error == nil else { return }
+        do {
+            let json = try JSONSerialization.jsonObject(with: data, options: .allowFragments) as! [String:Any]
+            callback(json, nil)
+        } catch let error as NSError {
+            callback(nil, error)
+        }
+    })
+    task.resume()
+}
+
 func sendBroadcast(data:[String:Any]) -> Void {
     let jsonData = try! JSONSerialization.data(withJSONObject: data)
 

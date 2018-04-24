@@ -10,11 +10,46 @@ import UIKit
 
 class ClinicianPatientHistoryViewController: UIViewController {
 
+    @IBOutlet weak var medicalHistory: UILabel!
+    @IBOutlet weak var medications: UILabel!
+    @IBOutlet weak var anticoagulants: UILabel!
+    @IBOutlet weak var lastDose: UILabel!
+    @IBOutlet weak var hopc: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
-    }
+        getPatientData { (json, err) in
+            if (json != nil) {
+                DispatchQueue.main.async {
+                    let appDelegate = UIApplication.shared.delegate as! AppDelegate
+                    appDelegate.patientData = json!
+                    let p = appDelegate.patientData
+                    if p.keys.contains("pastMedicalHistory") {
+                        self.medicalHistory.text = p["pastMedicalHistory"] as! String
+                    }
+                    if p.keys.contains("medications") {
+                        self.medications.text = p["medications"] as! String
+                    }
+                    if p.keys.contains("hopc") {
+                        self.hopc.text = p["hopc"] as! String
+                    }
+                    if p.keys.contains("anticoagulantLastDose") {
+                        self.lastDose.text = p["anticoagulantLastDose"] as! String
+                    }
+                    
+                    if p.keys.contains("hasAntiCoagulant") {
+                        if (p["hasAntiCoagulant"] as! Bool) {
+                            self.anticoagulants.text = "Yes" 
+                        }
+                        else {
+                            self.anticoagulants.text = "No"
+                        }
+                    }
+                }
+                
+            }
+        }    }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()

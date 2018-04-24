@@ -11,6 +11,7 @@ import UIKit
 class MedicPatientHistoryViewController: UIViewController, UITextViewDelegate {
     @IBOutlet weak var pastMedicalHistory: UITextView!
     @IBOutlet weak var medications: UITextView!
+    @IBOutlet weak var lastDose: UIDatePicker!
     @IBOutlet weak var hopc: UITextView!
     @IBAction func anticoagulantsEdited(_ sender: UISegmentedControl) {
         var hasAntiCoagulant = true
@@ -57,6 +58,7 @@ class MedicPatientHistoryViewController: UIViewController, UITextViewDelegate {
     }
     
     func textViewDidEndEditing(_ textView: UITextView) {
+        
         let appDelegate = UIApplication.shared.delegate as! AppDelegate
         let d = [
             "pastMedicalHistory":pastMedicalHistory.text,

@@ -32,14 +32,7 @@ class EnterPatientDetailsViewController: UIViewController {
     }
     
     @IBAction func startCase(_ sender: Any) {
-        var gender1 = ""
-        if gender.selectedSegmentIndex == 0 {
-            gender1 = "male"
-        }
-        else {
-            gender1 = "female"
-        }
-        
+
         let formatter = DateFormatter()
         formatter.dateFormat = "yyyy-MM-dd HH:mm:ss"
         let lastSeenWellString = formatter.string(from: lastSeenWell.date)
@@ -48,7 +41,7 @@ class EnterPatientDetailsViewController: UIViewController {
                 "firstName":firstName.text,
                 "lastName":lastName.text,
                 "dob":dob.text,
-                "gender":gender1,
+                "gender":gender.selectedSegmentIndex,
                 "location":location.text,
                 "address":address.text,
                 "lastSeenWell":lastSeenWellString,
