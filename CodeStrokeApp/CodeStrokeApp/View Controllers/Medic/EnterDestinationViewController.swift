@@ -17,6 +17,18 @@ class EnterDestinationViewController: UIViewController, UIPickerViewDelegate, UI
         return 3
     }
     
+    func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
+        if row == 0 {
+            return "Royal Melbourne"
+        }
+        
+        if row == 1 {
+            return "Austin"
+        }
+        
+        return "St. Vincent's Hospital"
+    }
+    
     @IBOutlet weak var destinationList: UIPickerView!
     
     override func viewDidLoad() {

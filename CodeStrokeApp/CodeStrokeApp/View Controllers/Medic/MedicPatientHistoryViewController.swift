@@ -13,9 +13,34 @@ class MedicPatientHistoryViewController: UIViewController, UITextViewDelegate {
     @IBOutlet weak var medications: UITextView!
     @IBOutlet weak var hopc: UITextView!
     @IBAction func anticoagulantsEdited(_ sender: UISegmentedControl) {
+        var hasAntiCoagulant = true
+        if sender.selectedSegmentIndex == 0 {
+            hasAntiCoagulant = true
+        }
+        else {
+            hasAntiCoagulant = false
+        }
+        let appDelegate = UIApplication.shared.delegate as! AppDelegate
+        let d = [
+            "hasAntiCoagulant":hasAntiCoagulant
+        ]
+        
+        d.forEach { (k,v) in appDelegate.patientData[k] = v }
+        
+        sendPatientData(data: appDelegate.patientData)
     }
     
     @IBAction func anticoagulantLastDoseEdited(_ sender: UIDatePicker) {
+        let formatter = DateFormatter()
+        formatter.dateFormat = "yyyy-MM-dd HH:mm:ss"
+        let anticoagulantLastDose = formatter.string(from: sender.date)
+        let appDelegate = UIApplication.shared.delegate as! AppDelegate
+        let d = [
+            "anticoagulantLastDose":anticoagulantLastDose
+        ]
+        
+        d.forEach { (k,v) in appDelegate.patientData[k] = v }
+        sendPatientData(data: appDelegate.patientData)
     }
     
     override func viewDidLoad() {
@@ -29,6 +54,19 @@ class MedicPatientHistoryViewController: UIViewController, UITextViewDelegate {
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    func textViewDidEndEditing(_ textView: UITextView) {
+        let appDelegate = UIApplication.shared.delegate as! AppDelegate
+        let d = [
+            "pastMedicalHistory":pastMedicalHistory.text,
+            "medications":medications.text,
+            "hopc":hopc.text
+        ]
+            
+        d.forEach { (k,v) in appDelegate.patientData[k] = v }
+        
+        sendPatientData(data: appDelegate.patientData)
     }
     
 

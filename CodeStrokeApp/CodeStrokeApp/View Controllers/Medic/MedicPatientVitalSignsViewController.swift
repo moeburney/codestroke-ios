@@ -14,9 +14,7 @@ class MedicPatientVitalSignsViewController: UIViewController {
     @IBOutlet weak var heartRateRegular: UISegmentedControl!
     @IBOutlet weak var respitoryRate: UITextField!
     @IBOutlet weak var oxygenSaturation: UITextField!
-    
     @IBOutlet weak var temperature: UITextField!
-    
     @IBOutlet weak var gcs: UITextField!
     @IBOutlet weak var bloodGlucose: UITextField!
     override func viewDidLoad() {
@@ -31,6 +29,23 @@ class MedicPatientVitalSignsViewController: UIViewController {
     }
     
     @IBAction func donePressed(_ sender: UIButton) {
+        let appDelegate = UIApplication.shared.delegate as! AppDelegate
+        let d = [
+            "bloodPressure":bloodPressure.text,
+            "heartRate":heartRate.text,
+            "heartRateRegular":true,
+            "respitoryRate":respitoryRate.text,
+            "oxygenSaturation":oxygenSaturation.text,
+            "temperature":temperature.text,
+            "gcs":gcs.text,
+            "bloodGlucose":bloodGlucose.text
+        ] as [String:Any]
+        
+        d.forEach { (k,v) in appDelegate.patientData[k] = v }
+        
+        sendPatientData(data: appDelegate.patientData)
+        self.dismiss(animated: false, completion: nil)
+
     }
     
     /*

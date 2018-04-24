@@ -17,12 +17,11 @@ class MedicPatientRaceScoreViewController: UIViewController, UIPickerViewDataSou
         return 3;
     }
     
-
     @IBOutlet weak var facialPalsyRaceScore: UIPickerView!
     @IBOutlet weak var armMotorRaceScore: UIPickerView!
     @IBOutlet weak var legMotorRaceScore: UIPickerView!
     @IBOutlet weak var headAndGazeRaceScore: UIPickerView!
-        @IBOutlet weak var hemiparesis: UISegmentedControl!
+    @IBOutlet weak var hemiparesis: UISegmentedControl!
     override func viewDidLoad() {
         super.viewDidLoad()
         facialPalsyRaceScore.delegate = self
@@ -46,6 +45,7 @@ class MedicPatientRaceScoreViewController: UIViewController, UIPickerViewDataSou
     }
     
     @IBAction func donePressed(_ sender: UIButton) {
+        self.dismiss(animated: false, completion: nil)
     }
     
     /*

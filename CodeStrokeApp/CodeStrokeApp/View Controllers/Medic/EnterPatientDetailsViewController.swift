@@ -22,7 +22,8 @@ class EnterPatientDetailsViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        let appDelegate = UIApplication.shared.delegate as! AppDelegate
+        appDelegate.clinicianLoggedIn = false
     }
 
     override func didReceiveMemoryWarning() {
@@ -31,11 +32,33 @@ class EnterPatientDetailsViewController: UIViewController {
     }
     
     @IBAction func startCase(_ sender: Any) {
-        // get patient
-        // create patient if not exists
-        // get patient
-        // create a case
-        // send out broadcast
+        var gender1 = ""
+        if gender.selectedSegmentIndex == 0 {
+            gender1 = "male"
+        }
+        else {
+            gender1 = "female"
+        }
+        
+        let formatter = DateFormatter()
+        formatter.dateFormat = "yyyy-MM-dd HH:mm:ss"
+        let lastSeenWellString = formatter.string(from: lastSeenWell.date)
+      
+        let d = [
+                "firstName":firstName.text,
+                "lastName":lastName.text,
+                "dob":dob.text,
+                "gender":gender1,
+                "location":location.text,
+                "address":address.text,
+                "lastSeenWell":lastSeenWellString,
+                "weight":weight.text
+            ] as [String : Any]
+        
+        let appDelegate = UIApplication.shared.delegate as! AppDelegate
+        d.forEach { (k,v) in appDelegate.patientData[k] = v }
+        
+        sendPatientData(data: appDelegate.patientData)
         sendBroadcast(data: ["contents":["en":"New Patient"], "data":["h":"H"]])
     }
     

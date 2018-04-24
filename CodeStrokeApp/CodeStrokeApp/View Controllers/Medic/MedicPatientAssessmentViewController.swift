@@ -11,6 +11,21 @@ import UIKit
 class MedicPatientAssessmentViewController: UIViewController {
 
     @IBAction func cannulaEdited(_ sender: UISegmentedControl) {
+        var hasCannula = true
+        if sender.selectedSegmentIndex == 0 {
+            hasCannula = true
+        }
+        else {
+            hasCannula = false
+        }
+        let appDelegate = UIApplication.shared.delegate as! AppDelegate
+        let d = [
+            "hasCannula":hasCannula
+        ]
+        
+        d.forEach { (k,v) in appDelegate.patientData[k] = v }
+        
+        sendPatientData(data: appDelegate.patientData)
     }
     
     override func viewDidLoad() {

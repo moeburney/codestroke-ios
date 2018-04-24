@@ -26,7 +26,19 @@ class MedicPatientMassViewController: UIViewController {
     
 
     @IBAction func donePressed(_ sender: UIButton) {
+        let appDelegate = UIApplication.shared.delegate as! AppDelegate
+        let d = [
+            "facialDroop":facialDroop.isOn,
+            "armDrift":armDrift.isOn,
+            "weakGrip":weakGrip.isOn,
+            "speechDifficulty":speechDifficulty.isOn
+        ]
+        
+        d.forEach { (k,v) in appDelegate.patientData[k] = v }
+        sendPatientData(data: appDelegate.patientData)
+        self.dismiss(animated: false, completion: nil)
     }
+    
     /*
     // MARK: - Navigation
 

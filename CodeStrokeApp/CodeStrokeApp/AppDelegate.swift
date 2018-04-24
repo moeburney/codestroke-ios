@@ -14,7 +14,8 @@ import OneSignal
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
-
+    var patientData:[String:Any] = [:]
+    var clinicianLoggedIn = true
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         let onesignalInitSettings = [kOSSettingsKeyAutoPrompt: false]
