@@ -9,6 +9,21 @@
 /* Begin PBXBuildFile section */
 		4CFC800256F7C0730BED58E4 /* Pods_OneSignalNotificationServiceExtension.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FDD34D124FA1E3A2C5BF8243 /* Pods_OneSignalNotificationServiceExtension.framework */; };
 		D068F8ACD573D998AF5B37D7 /* Pods_CodeStrokeApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B1E16B9BE818CA25907DAAB2 /* Pods_CodeStrokeApp.framework */; };
+		DD63501D208EBECB0028E896 /* EnterDestinationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD63501C208EBECB0028E896 /* EnterDestinationViewController.swift */; };
+		DD63501F208EBF010028E896 /* EnterPatientDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD63501E208EBF010028E896 /* EnterPatientDetailsViewController.swift */; };
+		DD635021208EBF470028E896 /* MedicPatientDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD635020208EBF470028E896 /* MedicPatientDetailsViewController.swift */; };
+		DD635023208EBF660028E896 /* MedicPatientHistoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD635022208EBF660028E896 /* MedicPatientHistoryViewController.swift */; };
+		DD635025208EBF9C0028E896 /* MedicPatientAssessmentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD635024208EBF9C0028E896 /* MedicPatientAssessmentViewController.swift */; };
+		DD635027208EBFB90028E896 /* MedicPatientMassViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD635026208EBFB90028E896 /* MedicPatientMassViewController.swift */; };
+		DD635029208EBFCC0028E896 /* MedicPatientVitalSignsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD635028208EBFCC0028E896 /* MedicPatientVitalSignsViewController.swift */; };
+		DD63502B208EBFE50028E896 /* MedicPatientRaceScoreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD63502A208EBFE50028E896 /* MedicPatientRaceScoreViewController.swift */; };
+		DD63502D208F103B0028E896 /* BroadcastController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD63502C208F103B0028E896 /* BroadcastController.swift */; };
+		DD635033208F44460028E896 /* ClinicianPatientDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD635032208F44460028E896 /* ClinicianPatientDetailsViewController.swift */; };
+		DD635035208F44570028E896 /* ClinicianPatientHistoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD635034208F44570028E896 /* ClinicianPatientHistoryViewController.swift */; };
+		DD635037208F446E0028E896 /* ClinicianPatientAssessmentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD635036208F446E0028E896 /* ClinicianPatientAssessmentViewController.swift */; };
+		DD635039208F45890028E896 /* ClinicianPatientNIHHSViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD635038208F45890028E896 /* ClinicianPatientNIHHSViewController.swift */; };
+		DD63503F208F47FF0028E896 /* ClinicianPatientRadiologyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD63503E208F47FF0028E896 /* ClinicianPatientRadiologyViewController.swift */; };
+		DD635041208F48130028E896 /* ClinicianPatientManagementViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD635040208F48130028E896 /* ClinicianPatientManagementViewController.swift */; };
 		DDC0F4DB208748C5007F3D7A /* NotificationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDC0F4DA208748C5007F3D7A /* NotificationService.swift */; };
 		DDC0F4DF208748C5007F3D7A /* OneSignalNotificationServiceExtension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = DDC0F4D8208748C5007F3D7A /* OneSignalNotificationServiceExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		DDCC2ADB201DA2A800104B22 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDCC2ADA201DA2A800104B22 /* AppDelegate.swift */; };
@@ -49,6 +64,21 @@
 		B62FC9351CAA7405E79754EC /* Pods-OneSignalNotificationServiceExtension.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OneSignalNotificationServiceExtension.release.xcconfig"; path = "Pods/Target Support Files/Pods-OneSignalNotificationServiceExtension/Pods-OneSignalNotificationServiceExtension.release.xcconfig"; sourceTree = "<group>"; };
 		D8F708252990ABDB000B19AA /* Pods-OneSignalNotificationServiceExtension.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OneSignalNotificationServiceExtension.debug.xcconfig"; path = "Pods/Target Support Files/Pods-OneSignalNotificationServiceExtension/Pods-OneSignalNotificationServiceExtension.debug.xcconfig"; sourceTree = "<group>"; };
 		DD2331422086493400B58B05 /* CodeStrokeApp.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = CodeStrokeApp.entitlements; sourceTree = "<group>"; };
+		DD63501C208EBECB0028E896 /* EnterDestinationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnterDestinationViewController.swift; sourceTree = "<group>"; };
+		DD63501E208EBF010028E896 /* EnterPatientDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnterPatientDetailsViewController.swift; sourceTree = "<group>"; };
+		DD635020208EBF470028E896 /* MedicPatientDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MedicPatientDetailsViewController.swift; sourceTree = "<group>"; };
+		DD635022208EBF660028E896 /* MedicPatientHistoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MedicPatientHistoryViewController.swift; sourceTree = "<group>"; };
+		DD635024208EBF9C0028E896 /* MedicPatientAssessmentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MedicPatientAssessmentViewController.swift; sourceTree = "<group>"; };
+		DD635026208EBFB90028E896 /* MedicPatientMassViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MedicPatientMassViewController.swift; sourceTree = "<group>"; };
+		DD635028208EBFCC0028E896 /* MedicPatientVitalSignsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MedicPatientVitalSignsViewController.swift; sourceTree = "<group>"; };
+		DD63502A208EBFE50028E896 /* MedicPatientRaceScoreViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MedicPatientRaceScoreViewController.swift; sourceTree = "<group>"; };
+		DD63502C208F103B0028E896 /* BroadcastController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BroadcastController.swift; sourceTree = "<group>"; };
+		DD635032208F44460028E896 /* ClinicianPatientDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClinicianPatientDetailsViewController.swift; sourceTree = "<group>"; };
+		DD635034208F44570028E896 /* ClinicianPatientHistoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClinicianPatientHistoryViewController.swift; sourceTree = "<group>"; };
+		DD635036208F446E0028E896 /* ClinicianPatientAssessmentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClinicianPatientAssessmentViewController.swift; sourceTree = "<group>"; };
+		DD635038208F45890028E896 /* ClinicianPatientNIHHSViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClinicianPatientNIHHSViewController.swift; sourceTree = "<group>"; };
+		DD63503E208F47FF0028E896 /* ClinicianPatientRadiologyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClinicianPatientRadiologyViewController.swift; sourceTree = "<group>"; };
+		DD635040208F48130028E896 /* ClinicianPatientManagementViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClinicianPatientManagementViewController.swift; sourceTree = "<group>"; };
 		DDC0F4D8208748C5007F3D7A /* OneSignalNotificationServiceExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = OneSignalNotificationServiceExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		DDC0F4DA208748C5007F3D7A /* NotificationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationService.swift; sourceTree = "<group>"; };
 		DDC0F4DC208748C5007F3D7A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -102,6 +132,43 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		DD63501A208EBD1B0028E896 /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				DD635031208F43E00028E896 /* Clinician */,
+				DD63501B208EBDED0028E896 /* Medic */,
+			);
+			path = "View Controllers";
+			sourceTree = "<group>";
+		};
+		DD63501B208EBDED0028E896 /* Medic */ = {
+			isa = PBXGroup;
+			children = (
+				DD63501C208EBECB0028E896 /* EnterDestinationViewController.swift */,
+				DD63501E208EBF010028E896 /* EnterPatientDetailsViewController.swift */,
+				DD635020208EBF470028E896 /* MedicPatientDetailsViewController.swift */,
+				DD635022208EBF660028E896 /* MedicPatientHistoryViewController.swift */,
+				DD635024208EBF9C0028E896 /* MedicPatientAssessmentViewController.swift */,
+				DD635026208EBFB90028E896 /* MedicPatientMassViewController.swift */,
+				DD635028208EBFCC0028E896 /* MedicPatientVitalSignsViewController.swift */,
+				DD63502A208EBFE50028E896 /* MedicPatientRaceScoreViewController.swift */,
+			);
+			path = Medic;
+			sourceTree = "<group>";
+		};
+		DD635031208F43E00028E896 /* Clinician */ = {
+			isa = PBXGroup;
+			children = (
+				DD635032208F44460028E896 /* ClinicianPatientDetailsViewController.swift */,
+				DD635034208F44570028E896 /* ClinicianPatientHistoryViewController.swift */,
+				DD635036208F446E0028E896 /* ClinicianPatientAssessmentViewController.swift */,
+				DD635038208F45890028E896 /* ClinicianPatientNIHHSViewController.swift */,
+				DD63503E208F47FF0028E896 /* ClinicianPatientRadiologyViewController.swift */,
+				DD635040208F48130028E896 /* ClinicianPatientManagementViewController.swift */,
+			);
+			path = Clinician;
+			sourceTree = "<group>";
+		};
 		DDC0F4D9208748C5007F3D7A /* OneSignalNotificationServiceExtension */ = {
 			isa = PBXGroup;
 			children = (
@@ -134,6 +201,8 @@
 		DDCC2AD9201DA2A800104B22 /* CodeStrokeApp */ = {
 			isa = PBXGroup;
 			children = (
+				DD63502C208F103B0028E896 /* BroadcastController.swift */,
+				DD63501A208EBD1B0028E896 /* View Controllers */,
 				DD2331422086493400B58B05 /* CodeStrokeApp.entitlements */,
 				DDCC2ADA201DA2A800104B22 /* AppDelegate.swift */,
 				DDCC2ADC201DA2A800104B22 /* ViewController.swift */,
@@ -305,8 +374,23 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DD635041208F48130028E896 /* ClinicianPatientManagementViewController.swift in Sources */,
+				DD63503F208F47FF0028E896 /* ClinicianPatientRadiologyViewController.swift in Sources */,
+				DD635023208EBF660028E896 /* MedicPatientHistoryViewController.swift in Sources */,
+				DD635027208EBFB90028E896 /* MedicPatientMassViewController.swift in Sources */,
+				DD63502D208F103B0028E896 /* BroadcastController.swift in Sources */,
 				DDCC2ADD201DA2A800104B22 /* ViewController.swift in Sources */,
+				DD63501D208EBECB0028E896 /* EnterDestinationViewController.swift in Sources */,
+				DD635039208F45890028E896 /* ClinicianPatientNIHHSViewController.swift in Sources */,
+				DD635037208F446E0028E896 /* ClinicianPatientAssessmentViewController.swift in Sources */,
+				DD635025208EBF9C0028E896 /* MedicPatientAssessmentViewController.swift in Sources */,
+				DD635035208F44570028E896 /* ClinicianPatientHistoryViewController.swift in Sources */,
+				DD63501F208EBF010028E896 /* EnterPatientDetailsViewController.swift in Sources */,
+				DD635029208EBFCC0028E896 /* MedicPatientVitalSignsViewController.swift in Sources */,
+				DD635021208EBF470028E896 /* MedicPatientDetailsViewController.swift in Sources */,
 				DDCC2ADB201DA2A800104B22 /* AppDelegate.swift in Sources */,
+				DD635033208F44460028E896 /* ClinicianPatientDetailsViewController.swift in Sources */,
+				DD63502B208EBFE50028E896 /* MedicPatientRaceScoreViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
